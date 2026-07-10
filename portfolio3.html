@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфоліо | Valentyna</title>
+  <meta name="description" content="Портфоліо графічної дизайнерки: айдентика, логотипи, постери, паковання та поліграфія.">
+  <link rel="stylesheet" href="css3/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index3.html" aria-label="На головну">Valentyna</a>
+    <button class="menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" aria-label="Головна навігація">
+      <a href="index3.html">Головна</a>
+      <a href="services3.html">Послуги</a>
+      <a class="is-active" href="portfolio3.html">Портфоліо</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" aria-label="Обкладинка сторінки портфоліо">
+      <img class="hero-image" src="assets3/pageshead/portfolio.svg" alt="Портфоліо — декоративні хвилясті лінії">
+    </section>
+
+    <section class="section portfolio-section" aria-label="Роботи">
+      <div class="filter-bar" aria-label="Фільтри портфоліо">
+        <button class="filter-button is-active" type="button" data-filter="all">Усі роботи</button>
+        <button class="filter-button" type="button" data-filter="identity">Айдентика</button>
+        <button class="filter-button" type="button" data-filter="logos">Логотипи</button>
+        <button class="filter-button" type="button" data-filter="posters">Постери</button>
+        <button class="filter-button" type="button" data-filter="packaging">Паковання</button>
+        <button class="filter-button" type="button" data-filter="other">Інше</button>
+      </div>
+
+      <div class="work-grid portfolio-grid">
+        <article class="work-card project-card project-card--featured" data-category="logos identity">
+          <a href="cases3/dandelion-wine.html">
+            <img src="assets3/bigproject/dandelion wine/A.webp" alt="Айдентика винного бренду Dandelion Wine">
+            <div class="work-info">
+              <span>Логотипи · Айдентика · Великий кейс</span>
+              <h2>Dandelion Wine</h2>
+              <p>Айдентика для бренду кавʼярні.</p>
+              <strong>Відкрити повний кейс</strong>
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card project-card project-card--featured" data-category="logos identity">
+          <a href="cases3/timoti-playwear.html">
+            <img src="assets3/bigproject/Timotiplaywear/A.webp" alt="Айдентика бренду дитячого одягу Timoti Playwear">
+            <div class="work-info">
+              <span>Логотипи · Айдентика · Великий кейс</span>
+              <h2>Timoti Playwear</h2>
+              <p>Айдентика для бренду дитячого одягу.</p>
+              <strong>Відкрити повний кейс</strong>
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card" id="project-nest" data-category="logos">
+          <button class="project-open" type="button" data-title="Nest" data-category-label="Логотипи" data-description="Логотип Nest для закладу коворкінга та пояснення побудови логотипу." data-images="assets3/logo/nest/nest.svg,assets3/logo/nest/nestexplanation.svg">
+            <img src="assets3/logo/nest/nest.svg" alt="Логотип Nest">
+            <div class="work-info"><span>Логотипи</span><h2>Nest</h2><p>Логотип.</p><strong>Переглянути проєкт</strong></div>
+          </button>
+        </article>
+
+        <article class="work-card" id="project-just-a-girl" data-category="posters">
+          <button class="project-open" type="button" data-title="Just a Girl" data-category-label="Постери" data-description="Постер Just a Girl." data-images="assets3/posters/justagirl.webp">
+            <img src="assets3/posters/justagirl.webp" alt="Постер Just a Girl">
+            <div class="work-info"><span>Постери</span><h2>Just a Girl</h2><p>Постер з дівчатами.</p><strong>Переглянути проєкт</strong></div>
+          </button>
+        </article>
+
+        <article class="work-card" id="project-live-in-clouds" data-category="posters">
+          <button class="project-open" type="button" data-title="Live in the Clouds" data-category-label="Постери" data-description="Постер Live in the Clouds. Тут ця фраза - не про втечу від реальності. Це про мрії, генерації нових ідей і заборону чужій думці визанчати твій шлях." data-images="assets3/posters/liveintheclouds.webp">
+            <img src="assets3/posters/liveintheclouds.webp" alt="Постер Live in the Clouds">
+            <div class="work-info"><span>Постери</span><h2>Live in the Clouds</h2><p>Постер.</p><strong>Переглянути проєкт</strong></div>
+          </button>
+        </article>
+
+        <article class="work-card" id="project-mycard" data-category="other">
+          <button class="project-open" type="button" data-title="Візитка" data-category-label="Інше" data-description="Дизайн двосторонньої візитки." data-images="assets3/other/mycard/mycardtwo.webp,assets3/other/mycard/mycardfront.webp,assets3/other/mycard/mycardback.webp,assets3/other/mycard/mycardmockup.webp">
+            <img src="assets3/other/mycard/mycardtwo.webp" alt="Проєкт візитки">
+            <div class="work-info"><span>Інше</span><h2>Візитка</h2><p>Візитка графічного дизайнера.</p><strong>Переглянути проєкт</strong></div>
+          </button>
+        </article>
+
+        <article class="work-card" id="project-classic" data-category="other">
+          <button class="project-open" type="button" data-title="Класичне запрошення" data-category-label="Інше" data-description="Класичне запрошення з оформленням лицьової та зворотної сторін." data-images="assets3/other/classic/classictwo.webp,assets3/other/classic/classicfront.webp,assets3/other/classic/classicback.webp">
+            <img src="assets3/other/classic/classictwo.webp" alt="Класичне запрошення">
+            <div class="work-info"><span>Інше</span><h2>Класичне запрошення</h2><p>Дизайн запрошення у класичному стилі.</p><strong>Переглянути проєкт</strong></div>
+          </button>
+        </article>
+
+        <article class="work-card" id="project-gotic" data-category="other">
+          <button class="project-open" type="button" data-title="Готичне запрошення" data-category-label="Інше" data-description="Атмосферне запрошення у готичному стилі." data-images="assets3/other/gotic/gotictwo.webp,assets3/other/gotic/goticfront.webp,assets3/other/gotic/goticback.webp">
+            <img src="assets3/other/gotic/gotictwo.webp" alt="Готичне запрошення">
+            <div class="work-info"><span>Інше</span><h2>Готичне запрошення</h2><p>Дизайн запрошення у готичному стилі.</p><strong>Переглянути проєкт</strong></div>
+          </button>
+        </article>
+
+        <article class="work-card" id="project-blue-mountains" data-category="other">
+          <button class="project-open" type="button" data-title="Blue Mountains" data-category-label="Інше" data-description="Обкладинка до пісні з атмосферним візуальним образом." data-images="assets3/other/bluemountions.webp">
+            <img src="assets3/other/bluemountions.webp" alt="Обкладинка до пісні Blue Mountains">
+            <div class="work-info"><span>Інше</span><h2>Коли заснули сині гори</h2><p>Обкладинка до пісні.</p><strong>Переглянути проєкт</strong></div>
+          </button>
+        </article>
+
+        <article class="work-card" id="project-menu" data-category="other">
+          <button class="project-open" type="button" data-title="Sugar Clouds" data-category-label="Інше" data-description="Дизайн меню для Sugar Clouds зі всіма розворотами." data-images="assets3/other/menu/menuall.webp,assets3/other/menu/menufront.webp,assets3/other/menu/menu12.webp,assets3/other/menu/menu34.webp,assets3/other/menu/menuback.webp">
+            <img src="assets3/other/menu/menuall.webp" alt="Меню Sugar Clouds">
+            <div class="work-info"><span>Інше</span><h2>Sugar Clouds</h2><p>Меню.</p><strong>Переглянути проєкт</strong></div>
+          </button>
+        </article>
+
+        <article class="work-card" id="project-cookie" data-category="packaging">
+          <button class="project-open" type="button" data-title="Печиво" data-category-label="Паковання" data-description="Дизайн паковання для печива та його розгортка." data-images="assets3/packaging/cookie/cookiefoto.webp,assets3/packaging/cookie/cookierozgortka.webp">
+            <img src="assets3/packaging/cookie/cookiefoto.webp" alt="Паковання для печива">
+            <div class="work-info"><span>Паковання</span><h2>Печиво</h2><p>Паковання продукту.</p><strong>Переглянути проєкт</strong></div>
+          </button>
+        </article>
+
+        <article class="work-card" id="project-tea" data-category="packaging">
+          <button class="project-open" type="button" data-title="Чай" data-category-label="Паковання" data-description="Серія паковань для чаю з єдиною візуальною системою." data-images="assets3/packaging/tea/teafotoall.webp,assets3/packaging/tea/teafotoone.webp,assets3/packaging/tea/tearozgortka.webp">
+            <img src="assets3/packaging/tea/teafotoall.webp" alt="Серія паковань для чаю">
+            <div class="work-info"><span>Паковання</span><h2>Чай</h2><p>Серія паковань.</p><strong>Переглянути проєкт</strong></div>
+          </button>
+        </article>
+
+        <article class="work-card" id="project-bauhaus" data-category="posters">
+          <button class="project-open" type="button" data-title="Bauhaus" data-category-label="Постери" data-description="Постер у стилі Баухаус." data-images="assets3/posters/bauhaus.webp">
+            <img src="assets3/posters/bauhaus.webp" alt="Постер Bauhaus">
+            <div class="work-info"><span>Постери</span><h2>Bauhaus</h2><p>Постер в стилі Баухаус.</p><strong>Переглянути проєкт</strong></div>
+          </button>
+        </article>
+
+        <article class="work-card" id="project-calm-down" data-category="posters">
+          <button class="project-open" type="button" data-title="Calm Down" data-category-label="Постери" data-description="Постер із закликом сповільнитися й заспокоїтися." data-images="assets3/posters/calmdown/calmdown.webp,assets3/posters/calmdown/calmdownmockup.webp">
+            <img src="assets3/posters/calmdown/calmdown.webp" alt="Постер Calm Down">
+            <div class="work-info"><span>Постери</span><h2>Calm Down</h2><p>Постер.</p><strong>Переглянути проєкт</strong></div>
+          </button>
+        </article>
+
+        <article class="work-card" id="project-intermezzo" data-category="posters">
+          <button class="project-open" type="button" data-title="Intermezzo" data-category-label="Постери" data-description="Постер, натхненний новелою М. Коцюбинського Intermezzo. На постері можна знайти всіх дійових осіб новели." data-images="assets3/posters/intermezzo.webp">
+            <img src="assets3/posters/intermezzo.webp" alt="Постер Intermezzo">
+            <div class="work-info"><span>Постери</span><h2>Intermezzo</h2><p>Постер, натхненний новелою М. Коцюбинського.</p><strong>Переглянути проєкт</strong></div>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact-band" id="contacts" aria-labelledby="contacts-title">
+      <h2 class="visually-hidden" id="contacts-title">Контакти</h2>
+      <div class="contact-actions">
+        <a href="mailto:valentinatrusova010@gmail.com">valentinatrusova010@gmail.com <span aria-hidden="true">↗</span></a>
+        <a href="https://www.instagram.com/trusovavaliusha?igsh=NmhvMGpqZWR6bW9x&utm_source=qr" target="_blank" rel="noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+        <a href="https://www.behance.net/valentynadesigner" target="_blank" rel="noreferrer">Behance <span aria-hidden="true">↗</span></a>
+        <a href="https://t.me/Sova068" target="_blank" rel="noreferrer">Telegram <span aria-hidden="true">↗</span></a>
+        <a href="https://wa.me/351965404186" target="_blank" rel="noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <div class="project-modal" hidden>
+    <div class="project-modal-backdrop" data-close-modal></div>
+    <section class="project-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" data-close-modal aria-label="Закрити">×</button>
+      <div class="modal-media">
+        <img class="modal-image" alt="">
+        <div class="modal-thumbs" aria-label="Інші зображення проєкту"></div>
+      </div>
+      <div class="modal-copy">
+        <p class="eyebrow modal-category"></p>
+        <h2 id="modal-title"></h2>
+        <p class="modal-description"></p>
+        <p class="modal-detail"></p>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Valentyna</p>
+    <p>Graphic design portfolio</p>
+  </footer>
+
+  <script src="js3/main.js"></script>
+</body>
+</html>
