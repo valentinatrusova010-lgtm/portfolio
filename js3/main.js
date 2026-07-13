@@ -1,5 +1,19 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
+const isEnglish = document.documentElement.lang.toLowerCase().startsWith("en");
+const interfaceText = isEnglish
+  ? {
+      projectImage: (title) => `${title} - project image`,
+      showImage: (index) => `Show image ${index}`,
+      galleryImage: (title, index, total) => `${title} — image ${index} of ${total}`,
+      projectFallback: "Project",
+    }
+  : {
+      projectImage: (title) => `${title} - зображення проєкту`,
+      showImage: (index) => `Показати зображення ${index}`,
+      galleryImage: (title, index, total) => `${title} — зображення ${index} з ${total}`,
+      projectFallback: "Проєкт",
+    };
 
 if (menuToggle && siteNav) {
   menuToggle.addEventListener("click", () => {
@@ -40,7 +54,7 @@ const setActiveImage = (src, title) => {
   if (!modalImage || !modalThumbs) return;
 
   modalImage.src = src;
-  modalImage.alt = `${title} - зображення проєкту`;
+  modalImage.alt = interfaceText.projectImage(title);
 
   modalThumbs.querySelectorAll(".modal-thumb").forEach((button) => {
     button.classList.toggle("is-active", button.dataset.src === src);
@@ -80,7 +94,7 @@ openProjectButtons.forEach((button) => {
       thumb.className = "modal-thumb";
       thumb.type = "button";
       thumb.dataset.src = src;
-      thumb.setAttribute("aria-label", `Показати зображення ${index + 1}`);
+      thumb.setAttribute("aria-label", interfaceText.showImage(index + 1));
       image.src = src;
       image.alt = "";
       thumb.append(image);
@@ -111,7 +125,7 @@ document.querySelectorAll("[data-gallery]").forEach((gallery) => {
   const thumbs = [...gallery.querySelectorAll("[data-gallery-src]")];
   const previous = gallery.querySelector("[data-gallery-prev]");
   const next = gallery.querySelector("[data-gallery-next]");
-  const galleryTitle = gallery.dataset.galleryTitle || document.querySelector(".case-hero h1")?.textContent?.trim() || "Проєкт";
+  const galleryTitle = gallery.dataset.galleryTitle || document.querySelector(".case-hero h1")?.textContent?.trim() || interfaceText.projectFallback;
   let activeIndex = 0;
 
   const showImage = (index) => {
@@ -120,7 +134,7 @@ document.querySelectorAll("[data-gallery]").forEach((gallery) => {
     activeIndex = (index + thumbs.length) % thumbs.length;
     const activeThumb = thumbs[activeIndex];
     image.src = activeThumb.dataset.gallerySrc;
-    image.alt = `${galleryTitle} — зображення ${activeIndex + 1} з ${thumbs.length}`;
+    image.alt = interfaceText.galleryImage(galleryTitle, activeIndex + 1, thumbs.length);
     if (counter) counter.textContent = `${activeIndex + 1} / ${thumbs.length}`;
 
     thumbs.forEach((thumb, thumbIndex) => {
